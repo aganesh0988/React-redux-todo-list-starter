@@ -4,6 +4,7 @@ import { loadState, saveState } from './localStorage';
 
 // TODO: Access the `preloadedState` by loading the state from local storage
 
-// TODO: Use Redux's `createStore` function to generate the application's Redux store with the `tasksReducer` and the `preloadedState`.
+// TODO: Use Redux's `createStore` function to generate the Redux store
+//       with the `tasksReducer` and the `preloadedState`
 
-// TODO: Have the store subscribe to changes and save the state to local storage upon each change.
+// TODO: Subscribe to store changes and save the state upon each change

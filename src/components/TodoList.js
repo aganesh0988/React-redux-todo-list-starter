@@ -1,35 +1,35 @@
 import React from 'react';
 import Task from './Task';
 // TODO: Import the application's Redux store instance
-// TODO: Import the `deleteTask` action
+// TODO: Import the `deleteTask` action creator function
 
 class TodoList extends React.Component {
-  deleteTask = (id) => {
-    // TODO: Invoke `deleteTask` action creator function based on an `id` input
-    // TODO: Dispatch a 'DELETE_TASK' action
-  }
-
   componentDidMount() {
-    // TODO: Use the store's `subscribe` method to force update a component whenever the state changes
+    // TODO: Use `store.subscribe` to force an update when the state changes
     // TODO: Name the subscription as `this.unsubscribe`
   }
 
   componentWillUnmount() {
-    // TODO: Check if the component has mounted by checking if `this.unsubscribe` is defined
-    // TODO: If it is defined, invoke `this.unsubscribe` when the component unmounts
+    // TODO: Check if `this.unsubscribe` is defined
+    // TODO: If its defined, invoke `this.unsubscribe`
+  }
+
+  deleteTask = (id) => {
+    // TODO: Invoke `deleteTask` based on an `id` input
+    //       and dispatch a 'DELETE_TASK' action
   }
 
   render() {
-    // TODO: Access the tasks stored in the Redux store's state with the `getState` method
+    // TODO: Get the tasks stored in state with the `getState` method
     // TODO: Use debugger to view state
 
-    // TODO: If there are no tasks stored in state, have the `TodoList` component return `null`.
+    // TODO: If there are no tasks stored in state, return `null`.
 
     return (
       <ul>
         {/* 
           TODO: Render a `Task` component for each of the tasks stored in state 
-          TODO: Pass the `this.deleteTask` method, that has been wrapped with the `store.dispatch` method as a `deleteTask` prop
+          TODO: Pass the `this.deleteTask` method as a `deleteTask` prop
         */}
       </ul>
     );

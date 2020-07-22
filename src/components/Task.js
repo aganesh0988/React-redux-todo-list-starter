@@ -1,6 +1,6 @@
 import React from 'react';
 
-// TODO: Take in `deleteTask` function and `task` object as props
+// TODO: Take in `deleteTask` method and `task` object as props
 const Task = () => {
   const handleClick = () => {
     // TODO: Delete task
