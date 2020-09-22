@@ -1,11 +1,16 @@
 const STATE_KEY = 'tasks';
 
 export const loadState = () => {
-  // TODO: Try to access the stored tasks state from local storage
-  // TODO: If there is no state found, return `undefined`
-  // TODO: If the state was found, return the state (parsed into JavaScript)
-
-  // TODO: Catch any errors with a `console.warn` statement and return undefined
+  try {
+    const stateJSON = localStorage.getItem(STATE_KEY);
+    if (stateJSON === null) {
+      return undefined;
+    }
+    return JSON.parse(stateJSON);
+  } catch (err) {
+    console.warn(err);
+    return undefined;
+  }
 };
 
 export const saveState = (state) => {
@@ -13,4 +18,10 @@ export const saveState = (state) => {
   // TODO: Set the JSON string into local storage
 
   // TODO: Catch any errors with a `console.warn` statement
+  try {
+    const stateJSON = JSON.stringify(state);
+    localStorage.setItem(STATE_KEY, stateJSON);
+  } catch (err) {
+    console.warn(err);
+  }
 };
