@@ -8,3 +8,12 @@ import { loadState, saveState } from './localStorage';
 //       with the `tasksReducer` and the `preloadedState`
 
 // TODO: Subscribe to store changes and save the state upon each change
+const preloadedState = loadState();
+
+const store = createStore(tasksReducer, preloadedState);
+
+store.subscribe(() => {
+  saveState(store.getState());
+});
+
+export default store;
